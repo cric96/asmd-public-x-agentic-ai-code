@@ -17,5 +17,9 @@ lazy val root = (project in file("."))
     libraryDependencies += "org.junit.jupiter" % "junit-jupiter-engine" % "5.10.2" % Test,
     libraryDependencies += "org.mockito" % "mockito-core" % "5.11.0" % Test,
     libraryDependencies += "org.mockito" % "mockito-junit-jupiter" % "5.11.0" % Test,
-    libraryDependencies += "com.google.code.gson" % "gson" % "2.13.2"
+    libraryDependencies += "com.google.code.gson" % "gson" % "2.13.2",
+
+    // Add a concrete SLF4J binding so SLF4J doesn't default to NOP at runtime.
+    // Using Logback (compatible with SLF4J 2.x). Keep it in Runtime scope.
+    libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.4.11" % Runtime
   )
