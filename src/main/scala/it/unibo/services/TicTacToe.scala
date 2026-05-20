@@ -3,8 +3,6 @@ package it.unibo.services
 import dev.langchain4j.model.chat.ChatModel
 import dev.langchain4j.model.chat.request.ResponseFormat
 import dev.langchain4j.model.ollama.OllamaChatModel
-import dev.langchain4j.model.output.Response
-import dev.langchain4j.model.output.structured.Description
 import dev.langchain4j.service.UserMessage
 import it.unibo.Move
 import it.unibo.services.TicTacToe.{AIPlayer, Board, Player}
@@ -71,7 +69,7 @@ object TicTacToe:
 def testTicTacToe(): Unit =
   val model = OllamaChatModel.builder()
     .baseUrl("http://localhost:11434")
-    .modelName("qwen3.5:4b")
+    .modelName("gemma4:e2b")
     .responseFormat(ResponseFormat.JSON)
     .build()
 
