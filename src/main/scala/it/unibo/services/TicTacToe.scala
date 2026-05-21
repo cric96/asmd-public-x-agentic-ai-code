@@ -3,7 +3,7 @@ package it.unibo.services
 import dev.langchain4j.model.chat.ChatModel
 import dev.langchain4j.model.chat.request.ResponseFormat
 import dev.langchain4j.model.ollama.OllamaChatModel
-import dev.langchain4j.service.UserMessage
+import dev.langchain4j.service.{AiServices, UserMessage}
 import it.unibo.Move
 import it.unibo.services.TicTacToe.{AIPlayer, Board, Player}
 
@@ -61,7 +61,7 @@ object TicTacToe:
 
   object AIPlayer:
     def creatWith(model: ChatModel): AIPlayer =
-      dev.langchain4j.service.AiServices.builder(classOf[AIPlayer])
+      AiServices.builder(classOf[AIPlayer])
         .chatModel(model)
         .build()
 
