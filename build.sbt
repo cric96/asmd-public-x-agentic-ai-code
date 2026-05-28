@@ -4,7 +4,7 @@ ThisBuild / scalaVersion := "3.3.5"
 
 lazy val root = (project in file("."))
   .settings(
-    name := "asmd-public-03-llm-intro-code",
+    name := "asmd-public-12-llm-intro-code",
     libraryDependencies += "dev.langchain4j" % "langchain4j" % "1.15.0",
       libraryDependencies += "dev.langchain4j" % "langchain4j-agentic" % "1.15.0-beta25",
     libraryDependencies += "dev.langchain4j" % "langchain4j-ollama" % "1.15.0",
